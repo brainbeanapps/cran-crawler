@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Packages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Version</th>
+      <th>Publication date</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Maintainer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @packages.each do |package| %>
+      <tr>
+        <td><%= package.name %></td>
+        <td><%= package.title %></td>
+        <td><%= package.version %></td>
+        <td><%= package.publication_date %></td>
+        <td><%= package.description %></td>
+        <td><%= package.author %></td>
+        <td><%= package.maintainer %></td>
+        <td><%= link_to 'Show', package %></td>
+        <td><%= link_to 'Edit', edit_package_path(package) %></td>
+        <td><%= link_to 'Destroy', package, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Package', new_package_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @package.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @package.title %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @package.version %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @package.publication_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @package.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @package.author %>
+</p>
+
+<p>
+  <strong>Maintainer:</strong>
+  <%= @package.maintainer %>
+</p>
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>
